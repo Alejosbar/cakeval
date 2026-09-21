@@ -1,16 +1,339 @@
-<!doctype html>
-<html lang="<!-- figma:lang -->">
-  <head>
-    <!-- figma:head-start -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><!-- figma:title --></title>
-    <!-- figma:head-end -->
-  </head>
-  <body>
-    <!-- figma:body-start -->
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- figma:body-end -->
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cakeval — La clave que impulsa tu marca · Tabio, Cundinamarca</title>
+  <meta name="description" content="Publicidad creativa, accesible y efectiva para los pequeños emprendimientos de Tabio. Tu visibilidad es nuestra misión." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════ DEFINICIÓN GLOBAL DEL LOGO (SVG, no necesita archivos) ══════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="cvGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#6B5CE7"/>
+        <stop offset="100%" stop-color="#89CFF0"/>
+      </linearGradient>
+      <symbol id="logo-cakeval" viewBox="0 0 400 400">
+        <!-- Cámara -->
+        <g stroke="url(#cvGrad)" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 90 130 L 130 130 L 145 110 L 175 110 L 175 90 L 225 90 L 225 110 L 255 110 L 270 130 L 310 130 Q 330 130 330 150 L 330 220 Q 330 240 310 240 L 90 240 Q 70 240 70 220 L 70 150 Q 70 130 90 130 Z"/>
+          <circle cx="200" cy="185" r="42"/>
+          <circle cx="200" cy="185" r="32" fill="url(#cvGrad)" stroke="none"/>
+          <rect x="140" y="78" width="30" height="14" rx="3"/>
+        </g>
+        <!-- Texto -->
+        <text x="200" y="310" text-anchor="middle" font-family="'Outfit','Arial Black',sans-serif" font-size="66" font-weight="900" fill="url(#cvGrad)" letter-spacing="-1">Cakeval</text>
+        <text x="200" y="345" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="16" font-weight="700" fill="#6B5CE7">LA CLAVE QUE IMPULSA</text>
+        <text x="200" y="368" text-anchor="middle" font-family="'Outfit',sans-serif" font-size="16" font-weight="700" fill="#6B5CE7">TU MARCA</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 400 400" aria-label="Cakeval">
+          <use href="#logo-cakeval"/>
+        </svg>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#mision">Misión</a>
+        <a href="#vision">Visión</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn-primary nav-cta">Empecemos</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <g id="menuIcon">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio">Inicio</a>
+      <a href="#mision">Misión</a>
+      <a href="#vision">Visión</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <span class="badge">Tabio, Cundinamarca</span>
+        <h1 class="hero-title">
+          La clave que <span class="gradient-text">impulsa</span> tu marca
+        </h1>
+        <p class="hero-desc">
+          Publicidad creativa, accesible y efectiva para los pequeños emprendimientos de Tabio. Tu visibilidad es nuestra misión.
+        </p>
+        <div class="hero-actions">
+          <a href="#mision" class="btn btn-primary">Conócenos</a>
+          <a href="#contacto" class="btn btn-outline">Trabajemos juntos</a>
+        </div>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-glow"></div>
+        <div class="hero-logo-card">
+          <svg class="hero-logo-svg" viewBox="0 0 400 400" aria-label="Cakeval">
+            <use href="#logo-cakeval"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <a href="#mision" class="scroll-cue" aria-label="Scroll">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- ══════════ MISIÓN ══════════ -->
+  <section id="mision" class="section section-white">
+    <div class="container mission-grid">
+      <div class="mission-img-wrap">
+        <div class="mission-img-frame">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=600&fit=crop&auto=format" alt="Equipo Cakeval trabajando con emprendedores locales" />
+        </div>
+        <div class="mission-badge">
+          <div class="mission-badge-year">2019</div>
+          <div class="mission-badge-label">Fundada en Tabio</div>
+        </div>
+      </div>
+
+      <div class="mission-text">
+        <div class="section-tag">
+          <div class="tag-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B5CE7" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <span>Nuestra Misión</span>
+        </div>
+        <h2 class="section-title">Apoyamos el crecimiento de tu negocio</h2>
+        <p class="section-p">
+          La misión de Cakeval es el apoyo a los pequeños emprendimientos de Tabio dando un servicio de publicidad creativa accesible y efectiva que permite el aumento de su visibilidad y la atracción de más clientes.
+        </p>
+        <p class="section-p">
+          Trabajamos con responsabilidad, compromiso y cercanía con la comunidad donde comprendemos las necesidades de cada negocio y brindamos estrategias publicitarias que impulsan su crecimiento económico y fortalecen el comercio local.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ VISIÓN ══════════ -->
+  <section id="vision" class="section section-white">
+    <div class="container vision-grid">
+      <div class="vision-text">
+        <div class="section-tag">
+          <div class="tag-icon tag-icon-light">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B5CE7" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <span>Nuestra Visión</span>
+        </div>
+        <h2 class="section-title">Líderes en publicidad municipal para el 2029</h2>
+        <p class="section-p">
+          La visión de Cakeval en el 2029 es consolidarnos como empresa líder en publicidad a nivel municipal, reconocida por contribuir al desarrollo de pequeños negocios emprendedores.
+        </p>
+        <p class="section-p">
+          Buscamos ser un motor de crecimiento para la economía local, promoviendo una publicidad innovadora que genere positivismo a estas empresas.
+        </p>
+
+        <div class="vision-stats">
+          <div>
+            <div class="vision-stat-value">2029</div>
+            <div class="vision-stat-label">Meta de liderazgo</div>
+          </div>
+          <div class="vision-divider"></div>
+          <div>
+            <div class="vision-stat-value">100+</div>
+            <div class="vision-stat-label">Negocios apoyados</div>
+          </div>
+          <div class="vision-divider"></div>
+          <div>
+            <div class="vision-stat-value">Local</div>
+            <div class="vision-stat-label">Enfoque municipal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vision-img-wrap">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=500&fit=crop&auto=format" alt="Visión de crecimiento empresarial Cakeval" />
+        <div class="vision-img-overlay"></div>
+        <div class="vision-quote">
+          <p>"Un motor de crecimiento para la economía local."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ OBJETIVO GENERAL ══════════ -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="head-center">
+        <span class="eyebrow">Propósito</span>
+        <h2 class="section-title">Objetivo General</h2>
+        <p class="section-p center">
+          Desarrollar e implementar estrategias integrales de publicidad y marketing digital adaptadas a las necesidades del entorno municipal, que permitan a las pequeñas empresas optimizar su presencia en internet, incrementar su visibilidad comercial en el mercado local y fortalecer de manera duradera la relación con sus clientes, con el propósito de acelerar su posicionamiento e impulsar un crecimiento comercial continuo y sostenible.
+        </p>
+      </div>
+
+      <div class="objective-banner">
+        <div class="objective-banner-inner">
+          <div class="objective-item">
+            <span class="objective-icon">📡</span>
+            <h3 class="objective-title">Presencia digital</h3>
+            <p class="objective-desc">Optimizar la presencia en internet de cada pequeña empresa.</p>
+          </div>
+          <div class="objective-item">
+            <span class="objective-icon">📈</span>
+            <h3 class="objective-title">Visibilidad local</h3>
+            <p class="objective-desc">Incrementar la visibilidad en el mercado comercial municipal.</p>
+          </div>
+          <div class="objective-item">
+            <span class="objective-icon">🤝</span>
+            <h3 class="objective-title">Relación con clientes</h3>
+            <p class="objective-desc">Fortalecer de forma duradera el vínculo con sus clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ OBJETIVOS ESPECÍFICOS ══════════ -->
+  <section id="objetivos" class="section section-white">
+    <div class="container">
+      <div class="head-center">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2 class="section-title">Objetivos Específicos</h2>
+      </div>
+
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <div class="objective-num">01</div>
+          <p class="objective-text">Crear y gestionar contenido en redes sociales.</p>
+        </div>
+        <div class="objective-card">
+          <div class="objective-num">02</div>
+          <p class="objective-text">Implementar campañas publicitarias.</p>
+        </div>
+        <div class="objective-card">
+          <div class="objective-num">03</div>
+          <p class="objective-text">Mejorar el posicionamiento de las marcas.</p>
+        </div>
+        <div class="objective-card">
+          <div class="objective-num">04</div>
+          <p class="objective-text">Analizar el mercado y el público objetivo.</p>
+        </div>
+        <div class="objective-card">
+          <div class="objective-num">05</div>
+          <p class="objective-text">Mejorar las estrategias.</p>
+        </div>
+        <div class="objective-cta">
+          <div>
+            <p class="objective-cta-label">¿Listo para crecer?</p>
+            <a href="#contacto" class="objective-cta-link">Hablemos →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACTO ══════════ -->
+  <section id="contacto" class="contact-section">
+    <div class="container contact-content">
+      <span class="contact-badge">Contáctanos</span>
+      <h2 class="contact-title">
+        Impulsemos tu marca<br />
+        <span class="gradient-text">juntos</span>
+      </h2>
+      <p class="contact-desc">
+        Estamos aquí para ayudarte a crecer. Cuéntanos sobre tu negocio y diseñaremos la estrategia perfecta para ti.
+      </p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="business">Negocio</label>
+            <input type="text" id="business" placeholder="Nombre de tu negocio" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" placeholder="+57 300 000 0000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" rows="4" placeholder="Cuéntanos sobre tu negocio y qué necesitas..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+        </div>
+
+        <div id="formSuccess" class="form-success" hidden>
+          ✓ ¡Mensaje enviado! Te contactaremos pronto.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <svg class="footer-logo" viewBox="0 0 400 400" aria-label="Cakeval">
+        <use href="#logo-cakeval"/>
+      </svg>
+      <p class="footer-copy" id="footerCopy">
+        © Cakeval — Tabio, Cundinamarca. Todos los derechos reservados.
+      </p>
+      <div class="footer-socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
